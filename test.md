@@ -44,3 +44,11 @@ In eclipse there is no way to track the files which are changed during the devel
 You can only compare your changes to some specific branch.
 
 ---
+
+# Automate the Boring Stuff
+
+As we have discussed eclipse plugin of git is very efficient when there are multiple repositories to work on. We will try to minimize our time and manual effort. This thing can be done through the bash script. We will use GIT bash as an environment to run the script.
+
+Please [click here](/InstallationofGitBash.md) to see the installation process of Git Bash shell in system.
+
+Let me give you a brief context of Git Bash Shell befory we continue. 
