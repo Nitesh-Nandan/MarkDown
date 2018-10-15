@@ -37,12 +37,13 @@ Select _**Use the OpenSSL Library**_ and Click Next.
 
 ![](image/git-installation/step7.png)
 
+Select _**Use the OpenSSL Library**_ and Click Next.
+
 The file system of windows is different from Unix operating system. This option will tell the Git Bash how it should treat these cross-environment file.
 
 **Suggested:** Check the radio button of last option (Checkout as-is, Commit as-is).
 
 ![](image/git-installation/step8.png)
-
 
 Let the default setting (**Use MinTTY**)
 
