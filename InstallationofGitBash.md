@@ -11,7 +11,7 @@ Select the location where you want to install the GIT Bash.
 
 **Suggested:** Keep default lcoation.
 
-![](image/git-installation/step2.png)
+![Step2 img](https://github.com/Nitesh-Nandan/MarkDown/blob/master/image/git-installation/Step2.PNG)
 
 Now you will have option to select the components that you are willing to install.
 
