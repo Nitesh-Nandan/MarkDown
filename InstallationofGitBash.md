@@ -5,7 +5,7 @@ Once Git Bash Window installer is downloaded, run the installer and follow the s
 
 One pop screen will pop up click Next on it.
 
-![](image/git-installation/step1.png)
+![Step1 img](/image/git-installation/step2.pngimg.jpg?raw=true "Title")
 
 Select the location where you want to install the GIT Bash. 
 
