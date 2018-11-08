@@ -47,8 +47,102 @@ You can only compare your changes to some specific branch.
 
 # Automate the Boring Stuff
 
-As we have discussed eclipse plugin of git is very efficient when there are multiple repositories to work on. We will try to minimize our time and manual effort. This thing can be done through the bash script. We will use GIT bash as an environment to run the script.
+As we have discussed eclipse plugin of git is very inefficient when there are multiple repositories to work on. We will try to minimize our time and manual effort. This thing can be done through the bash script. We will use GIT bash as an environment to run the script.
 
 Please [click here](https://github.com/Nitesh-Nandan/MarkDown/blob/master/InstallationofGitBash.md) to see the installation process of Git Bash shell in system.
 
 Let me give you a brief context of Git Bash Shell befory we continue. 
+
+Bash is a UNIX Shell and command language interpreter, and git bash is build on top of it to support the git commands.
+
+
+
+## Important Links
+- [Boosting Git Bash Shell (Script Setup)]()
+- [First time git setup]()
+- [Setting up workspace]()
+- [Setting up the remotes]()
+- [Creating a feature branch]()
+- [Taking Daily Update]()
+- [Tracking the conflict file]()
+- [Checking the update status]()
+- [Merging the feature Branch]()
+- [Tracking the conflict file]()
+- [Deleting the feature Branch]()
+- [Tracking the Uncommited/Untracked file]()
+- [Fetching the code from other user's cloud repository]()
+- [Automatically Generating the commit message]()
+- [Short Hand commands]()
+- [Frequently asked questition (FAQ)]()
+
+
+## **Boosting Git Bash Shell**
+
+Once you have downloaded the git bash shell if not then please ([click here]()) to know the download procedure.
+
+After successfull install:&nbsp; Steps to be followed:
+- Step 1:&nbsp; Download or clone the Github Repostitory from [here](). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url:&nbsp; www.gitNiteshNandan.com <br>
+
+- Step 2:&nbsp; Copy the scripts folder and paste in your home directory. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for eg:&nbsp; C:/Users/nitesh.nandan (for me). <br>
+
+- Step 3:&nbsp; Open the .bash_profile with text editor and replace nitesh.nandan to you ldap id. <br>
+
+- Step 4:&nbsp; Save the file and paste in your home directory.<br>
+
+- Step 5:&nbsp; If you already have .bash_profile then replace the file with this file.<br>
+
+- ******************* DONE  **********************
+
+## **First time git setup**
+
+### Setting up email & username
+<pre>
+   $ git config --global user.name "nitesh.nandan"
+   $ git config --global user.email "nitesh.nandan@highradius.com"
+</pre>
+
+Rememeber this username or email is not you credentials, actually there is no relation between your credentials and the username that you provided.
+
+### Setting up your editor
+
+Default Git Bash comes with vim editor (a unix command line editor). The editor is not very user friendly. So we will setup sublime text editor: a light weight cross-platform code editor.
+
+You can download the portable version of editor from: <br>
+&nbsp;&nbsp;&nbsp;&nbsp; Url:&nbsp; https://www.sublimetext.com/3 <br>
+or you can [click here](https://www.sublimetext.com/3).
+
+Once you downloaded the portable version, unzip the file. Open the folder 
+you will se something like this: <br>
+
+![](image/git-installation/step6.png)<br>
+
+### Linking sublime text 3 to bash shell
+
+Reaname the parent folder containing subl application as sublime and copy this folder to your C drive. (you have freedom to choose your suitable directory).
+
+If you go with the C drive, the path of subl application should be "c:/sublime/subl.exe'. Open the command prompt and type full path of subl.exe, a sublime editor will be open confirming the correct path. Now link the same path to git bash, to do so open the git bash shell
+<pre>
+&nbsp;&nbsp; git config --global core.editor "'c:/sublime/subl.exe' -w"
+</pre>
+
+The linking of editor is finished.
+
+### Making you file system platform independent
+
+As we know, the code continously swithches between different platforms (linux, windows), the end of file is flag is different for both the platforms, so to maintain a uniformity across the platform we have to set clrf flag to false. Open your git bash: &nbsp;
+<pre>
+    git config --global core.autoclrf false
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
