@@ -67,8 +67,8 @@ Bash is a UNIX Shell and command language interpreter, and git bash is build on 
 - [Checking the update status]()
 - [Merging the feature Branch]()
 - [Tracking the conflict file]()
-- [Deleting the feature Branch]()
 - [Tracking the Uncommited/Untracked file]()
+- [Deleting the feature Branch]()
 - [Fetching the code from other user's cloud repository]()
 - [Automatically Generating the commit message]()
 - [Short Hand commands]()
@@ -356,3 +356,31 @@ The command goes like: <br>
     $ show_unt
 </pre>
 
+
+## **Deleting the feature Branch**
+
+As we usually worked on feature_branch, so when you done with the your task you might want to delete the branch. Therefore there is a script called 
+delete_branch which does the same in all the repository of workspace.
+
+There is two types of delete when comes to deleting the branch in git.
+1. Soft delete
+2. Hard delete
+
+In soft delete the branch will not get deleted if it is not merged with any other branch. It will save you if you run the command by mistake.
+
+In hard delete the branch will be deleted irrespective of whether it is merged or not. So, be carefull while perfoming the delete. 
+
+Deleting the branch will also delete all the commit related to that branch.
+
+script command: <br>
+<pre>
+    $ delete_branch [branch_name] [hard]
+</pre>
+
+Here branch_name is mandatory and hard is optional argument. If you don't provide hard, it will try to perform soft delete, or it will go for hard delete.
+
+The git command for deleting the branch is: <br>
+<pre>
+    $ git branch -d [branch_name]                   // soft delete
+    $ git branch -D [branch_name]                   // hard delete
+</pre>
