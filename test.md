@@ -59,7 +59,7 @@ Bash is a UNIX Shell and command language interpreter, and git bash is build on 
 - [Boost Your Git Bash Shell (Script Setup)](#boost-your-git-bash-shell)
 - [First time git setup](#first-time-git-setup)
 - [Setting up workspace](#setting-up-workspace)
-- [Setting up the remotes: See the Advantage](#setting-up-the-remotes:-see-the-advantage)
+- [Setting up the remotes: See the Advantage](#setting-up-the-remotes-see-the-advantage)
 - [Feature Branch Creation](#feature-branch-creation)
 - [Taking Daily Update](#taking-daily-update)
 - [Checking the update status](#checking-the-update-status)
@@ -471,28 +471,27 @@ These short hand commands are called alias.<br>
 ### Git Specific Commands
 
 
-1. <strong> &nbsp;clone: &nbsp;</strong> It will take your ldapId (username) as argument and download all the forked repository listed in the script in current working directory. [Click Here]() for more details.<br>
+1. <strong> &nbsp;clone: &nbsp;</strong> It will take your ldapId (username) as argument and download all the forked repository listed in the script in current working directory. [Click Here](#setting-up-workspace) for more details.<br>
 
-2. <strong> &nbsp;graph: &nbsp;</strong> This command will display commit history graph of working git directory. [Click Here]() for more details.<br>
+2. <strong> &nbsp;graph: &nbsp;</strong> This command will display commit history graph of working git directory.<br>
+
+3. <strong> &nbsp;daily_update: &nbsp;</strong> This command will help you to keep your local and forked repository with Official Repository. [Click Here](#taking-daily-update) for more details.<br>
+
+4. <strong> &nbsp;create_branch: &nbsp;</strong> This will create/switch to a feature branch or both. [Click Here](#feature-branch-creation) for more details.<br>
+
+5. <strong> &nbsp;delete_branch: &nbsp;</strong> This will delete the branch with name that has passed as argument. [Click Here](#deleting-the-feature-branch) for more details.<br><br>
 
 
-3. <strong> &nbsp;daily_update: &nbsp;</strong> This command will help you to keep your local and forked repository with Official Repository. [Click Here]() for more details.<br>
+6. <strong> &nbsp;feature_merge: &nbsp;</strong> It takes feature-branch name as argument and this branch will be merged to falcondev. Also generate a summary file named as <i>[feature-branch name]_merge_summary.txt </i>Click Here]() for more details. [Click Here](#merging-the-feature-branch) for more details.<br>
 
-4. <strong> &nbsp;create_branch: &nbsp;</strong> This will create/switch to a feature branch or both. [Click Here]() for more details.<br>
+7. <strong> &nbsp;show_sync: &nbsp;</strong> This script will help you to figure out whether you local and forked repository are on sync or not. [Click Here](#checking-the-daily-update) for more details.<br>
 
-5. <strong> &nbsp;delete_branch: &nbsp;</strong> This will delete the branch with name that has passed as argument. [Click Here]() for more details.<br><br>
-
-
-6. <strong> &nbsp;feature_merge: &nbsp;</strong> It takes feature-branch name as argument and this branch will be merged to falcondev. Also generate a summary file named as <i>[feature-branch name]_merge_summary.txt </i>Click Here]() for more details. [Click Here]() for more details.<br>
-
-7. <strong> &nbsp;show_sync: &nbsp;</strong> This script will help you to figure out whether you local and forked repository are on sync or not. [Click Here]() for more details.<br>
-
-8. <strong> &nbsp;show_unt: &nbsp;</strong> This will display the list of all the modified or untracked file that has yet to commit. [Click Here]() for more details.<br>
+8. <strong> &nbsp;show_unt: &nbsp;</strong> This will display the list of all the modified or untracked file that has yet to commit. [Click Here](#tracking-the-modified-untracked-file) for more details.<br>
 
 9. <strong> &nbsp;show_pdiff: &nbsp;</strong> This will list down all the file name that has been created or modified in feature_branch.
 <strong>Note: &nbsp;</strong> This command should only run in feature branch, created using create_branch script.<br>
 
-10. <strong> &nbsp;show_diff: &nbsp;</strong> This will list down all the file name that has been created or modified from last commit. [Click Here]() for more details.<br>
+10. <strong> &nbsp;show_diff: &nbsp;</strong> This will list down all the file name that has been created or modified from last commit. <br>
 
 11. <strong> &nbsp;show_cmg: &nbsp;</strong> This will display last generatd commit message.<br>
 
