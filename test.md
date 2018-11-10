@@ -384,3 +384,136 @@ The git command for deleting the branch is: <br>
     $ git branch -d [branch_name]                   // soft delete
     $ git branch -D [branch_name]                   // hard delete
 </pre>
+
+
+## **Fetching the code from other user's cloud repository**
+
+I personally feel the power of distributed version system like GIT when collabration comes in picture. In CVS, we share our code throgh mail or drive, thanks to distributed system which makes very easy to share your code or even your workspace.
+
+In clone script, I have introduced the concept of remote and while cloning a repository itself script will add all the remotes, so you don't need to add manually. 
+
+#### Problem Statement: 
+Let's suppose you and some of your team members are working on a user-story. During the development you want code from your group member, since code is not fully functional so your friend can't push the code to official repository. So how to take the Update?
+
+Here comes remote in action, remote is nothing but a link to repository that also exist somewhere in the cloud. So as you are fetching the latest change from Official Repository, similar way you can also fetch the changes from your friends repository.
+
+<strong> Note:&nbsp; </strong> In HighRadius everybody has read (fetch) aceess for all the repository exist in HighRadius git cloud.
+
+Command for the Opearation:
+<pre>
+    $ git fetch [remote-name]
+</pre>
+
+Here remote-name is mandatory parameter which holds the link and references of the repository.
+
+<strong> Note:&nbsp; </strong> This will only download the code from the link it will not merge to your working directory. So to take the change to working directory it has to be merged.
+
+## **Automatically Generating the commit message**
+
+The good commit message is always encouraged. You might fell writing a commit message is very easy, but believe me writing a good and clean commit message might not be so hard but it is time consuming. The another problem is suppose we write 10 commit message, there might be a high chance that we landup in 10 different format of commit message.
+
+This only works when your commit the change using git bash.
+After adding your changes in staging are you can commit as :
+<pre>
+    $ commit // this is modified version of git commit
+    $ git commit // this is default command that git bash support
+</pre>
+
+
+This will open a editor (default editor) like this:
+
+-- image
+
+
+## **Short Hand commands**
+
+These commands are written with the help of basic commands that exist in UNIX bash shell to save your time.
+
+These short hand commands are called alias.<br>
+<strong>Note: &nbsp;</strong> All short hand commands are present in <i>.bash_profile</i> file. You can chage the value as per your need.
+
+### Basic Commands
+
+1. <strong> &nbsp;subl: &nbsp;</strong> This comand will open your sublime text editor, if it is avialble in <i>C</i> drive. You can change the default location in <i>.bash_profile</i> file. <br>
+
+2. <strong> &nbsp;repo: &nbsp;</strong> This command directly take you to the local repository where git repository is located.<br>
+
+3. <strong> &nbsp;gd: &nbsp;</strong> This command directly take you to the desktop.<br>
+
+4. <strong> &nbsp;ccd: &nbsp;</strong> This command takes one argument. This command will create a folder with the name passed as argument and also take you inside the newly created directory. This command is integration of two basic comands. <pre>
+    $ mkdir [folder-name]
+    $ cd [folder-name]
+</pre>
+
+5. <strong> &nbsp;del : &nbsp;</strong> It will take one argument and delete the file/directory as passed in argument.<br>
+
+### Git Specific Commands
+
+
+1. <strong> &nbsp;clone: &nbsp;</strong> It will take your ldapId (username) as argument and download all the forked repository listed in the script in current working directory. [Click Here]() for more details.<br>
+
+2. <strong> &nbsp;graph: &nbsp;</strong> This command will display commit history graph of working git directory. [Click Here]() for more details.<br>
+
+
+3. <strong> &nbsp;daily_update: &nbsp;</strong> This command will help you to keep your local and forked repository with Official Repository. [Click Here]() for more details.<br>
+
+4. <strong> &nbsp;create_branch: &nbsp;</strong> This will create/switch to a feature branch or both. [Click Here]() for more details.<br>
+
+5. <strong> &nbsp;delete_branch: &nbsp;</strong> This will delete the branch with name that has passed as argument. [Click Here]() for more details.<br><br>
+
+
+6. <strong> &nbsp;feature_merge: &nbsp;</strong> It takes feature-branch name as argument and this branch will be merged to falcondev. Also generate a summary file named as <i>[feature-branch name]_merge_summary.txt </i>Click Here]() for more details. [Click Here]() for more details.<br>
+
+7. <strong> &nbsp;show_sync: &nbsp;</strong> This script will help you to figure out whether you local and forked repository are on sync or not. [Click Here]() for more details.<br>
+
+8. <strong> &nbsp;show_unt: &nbsp;</strong> This will display the list of all the modified or untracked file that has yet to commit. [Click Here]() for more details.<br>
+
+9. <strong> &nbsp;show_pdiff: &nbsp;</strong> This will list down all the file name that has been created or modified in feature_branch.
+<strong>Note: &nbsp;</strong> This command should only run in feature branch, created using create_branch script.<br>
+
+10. <strong> &nbsp;show_diff: &nbsp;</strong> This will list down all the file name that has been created or modified from last commit. [Click Here]() for more details.<br>
+
+11. <strong> &nbsp;show_cmg: &nbsp;</strong> This will display last generatd commit message.<br>
+
+12. <strong> &nbsp;show_gcmg: &nbsp;</strong> This will generate a fresh commit message and diplay in bash shell. This should call when you are working on feature branch only.
+
+13. <strong> &nbsp;git_help: &nbsp;</strong> This will be list down all the git specific customised commands.<br>
+<strong>Note: &nbsp;</strong> you can also type alias in bash shell. It will print all alias (short-hand) commands present in <i>.bash_profile.</i><br>
+
+14. <strong> &nbsp;last_commit: &nbsp;</strong> 
+
+### Bonus Commands
+
+1. <strong> &nbsp;node1: &nbsp;</strong> This will open the chrome browser<br>
+
+2. <strong> &nbsp;node2: &nbsp;</strong> You can see FIT Node1 log using this command. Make sure you have the fit log access.<br>
+
+2. <strong> &nbsp;node3: &nbsp;</strong> You can see FIT Node2 log using this command. Make sure you have the fit log access.<br>
+
+2. <strong> &nbsp;chrome: &nbsp;</strong> You can see FIT Node3 log using this command. Make sure you have the fit log access.<br>
+
+## **Frequently asked questition (FAQ)**
+
+<strong> &nbsp;Q 1: &nbsp;</strong> How many local git repository we can have ? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can have as many as repositoy you want, until your's disk is run out of memory.<br> <br>
+
+<strong> &nbsp;Q 2: &nbsp;</strong> How many feature branch I can create in git? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can create as many as branch, there is no limitation in no of branch.<br> <br>
+
+<strong> &nbsp;Q 3: &nbsp;</strong>Is it mandatory to take daily update ? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> No, It is not mandatory to take the update daily but make sure befor you push your changes it should have updated code and doesn't break functionality.<br> <br>
+
+<strong> &nbsp;Q 4: &nbsp;</strong> How many feature branch I can create in git? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can create as many as branch, there is no limitation in no of branch.<br> <br>
+
+<strong> &nbsp;Q 5: &nbsp;</strong> How many feature branch I can create in git? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can create as many as branch, there is no limitation in no of branch.<br> <br>
+
+<strong> &nbsp;Q 6: &nbsp;</strong> How many feature branch I can create in git? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can create as many as branch, there is no limitation in no of branch.<br> <br>
+
+<strong> &nbsp;Q 7: &nbsp;</strong> How many feature branch I can create in git? <br>
+<strong> &nbsp;Ans: &nbsp;</strong> You can create as many as branch, there is no limitation in no of branch.<br> <br>
+
+
+
