@@ -1,83 +1,82 @@
 # **HighRadius Git**
 Git is a distributed version-control system used for source-code mangement. Unlike CVS it supports for non-linear development i.e. we can work on thousand of parrellel features at a time.
 
- In HighRadius we use Git through eclipse but the fact is git-plugin of eclipse is unable to utilize most of  the powerful featuere  of GIT.
+ In HighRadius we use Git through eclipse but there is chance of doing better if we use git-bash in parallel.
 
-I have written few shell scripts which makes our day today task very easy.
+In this article we will discuss about to git-bash shell and also discover, how to make our task easy. In Conclusion, We will be using eclipse as well git-bash, as per our need convience.
 
 ---
 
 ## **Challenges in Eclipse**
 
 ### WorkSpace Setup
-This is one time setup and  might not be a big issue for a developer but definetly it is a boring to clone each repository one by one and setting up the remotes.
-If we properly setup the remotes then this setup might take 60 minutes. My question is can we do something better? 
-
-The above task can we done within 2 minutes with zero manual effort with the help of scripts.
+This is one time setup and might not be a big issue for a developer but definetly it is a boring to clone each repository one by one and setting up the remotes.
+If we properly setup the remotes then this setup might take 120-150 minutes. My question is can we do something better? 
 
 ### Daily Update
-In HighRadius a product like EIPP has appx 10 repositories and to sync a branch in  our Local repostitory and User's Public Repositories with Official Reopositories we have to perform these three operation:
+In HighRadius a product like EIPP has more than 10 repositories and to keep our Local repostitory and User's Public Repositories in sync with Official Reopositories we have to perform these three operation:
 
 1. Fetch the latest changes from Official Repositories.
 2. Merge the changes.
 3. Push the changes to User's Public Reopositories.
 
-This task has to be perfomed frequently as we have to work on latest code and if a repository has three branch ( generally we have ), we have repeat the same operation three times. This is time consuming and a very boring task for a developer like me.
+This task has to be perfomed frequently and for all the branches available in a repository.This is time consuming and a very boring task for a developer.
 
 
 ### Working on Feature Branch
 
-It is always better to work on a feature branch, in HighRadius feature branch is nothing but user story specific branch.
+It is always better to work on a feature branch, In HighRadius  you can call a feature branch is your user-story branch.
 
-To work in user-story branch we have to first create a user-story branch in all the repositories, this is really once again a tidious task as we have to repeat the process for all the repositories. 
+To work in user-story branch we have to first create a user-story branch in all the repositories, this is really once again a tidious task as we have to repeat the same process for all the repositories. 
 
 ### Writing a Commit Message
 
-Most of you might not be agree but believe writing a good commit message is not so easy, it takes times and there is high probablity that every time you chage your message format of commmit.
+Most of you might not be agree but believe me writing a good commit message is not so easy, it takes times and there is high probablity that every time you chage your commit message format.
 
 At later bad commit message become very difficult to track.
 
 ### Tracking the changes in User-Story Branch
 
-In eclipse there is no way to track the files which are changed during the development of User-Story Branch. 
-
-You can only compare your changes to some specific branch.
+In eclipse there is no easy way to track the files which are changed/created while working on User-Story.
+ 
+You can only compare your changes to some specific branch or commit.
 
 ---
 
-# Automate the Boring Stuff
+## **Automate the Boring Stuff**
 
-As we have discussed eclipse plugin of git is very inefficient when there are multiple repositories to work on. We will try to minimize our time and manual effort. This thing can be done through the bash script. We will use GIT bash as an environment to run the script.
+As we have discussed eclipse plugin of git is not sufficient when there are multiple repositories to work on. We will try to minimize our time and manual effort. This thing can be done through the bash script. We will use GIT bash as an environment to run the script.
 
-Please [click here](https://github.com/Nitesh-Nandan/MarkDown/blob/master/InstallationofGitBash.md) to see the installation process of Git Bash shell in system.
+Please [click here](https://github.com/Nitesh-Nandan/MarkDown/blob/master/InstallationofGitBash.md) to see the installation process of Git Bash shell in your system.
 
 Let me give you a brief context of Git Bash Shell befory we continue. 
 
 Bash is a UNIX Shell and command language interpreter, and git bash is build on top of it to support the git commands.
 
 
+### **Important Links**
 
-## Important Links
-- [Boosting Git Bash Shell (Script Setup)]()
-- [First time git setup]()
-- [Setting up workspace]()
-- [Setting up the remotes: See the Advantage]()
-- [Creating a feature branch]()
-- [Taking Daily Update]()
-- [Checking the update status]()
-- [Merging the feature Branch]()
-- [Tracking the conflict file]()
-- [Tracking the Uncommited/Untracked file]()
-- [Deleting the feature Branch]()
-- [Fetching the code from other user's cloud repository]()
-- [Automatically Generating the commit message]()
-- [Short Hand commands]()
-- [Frequently asked questition (FAQ)]()
+- [Boost Your Git Bash Shell (Script Setup)](#boost-your-git-bash-shell)
+- [First time git setup](#first-time-git-setup)
+- [Setting up workspace](#setting-up-workspace)
+- [Setting up the remotes: See the Advantage](#setting-up-the-remotes:-see-the-advantage)
+- [Feature Branch Creation](#feature-branch-creation)
+- [Taking Daily Update](#taking-daily-update)
+- [Checking the update status](#checking-the-update-status)
+- [Merging the feature Branch](#merging-the-feature-branch)
+- [Tracking the conflict file](#tracking-the-conflict-file)
+- [Tracking the Modified/Untracked file](#tracking-the-modified/untracked-file)
+- [Deleting the feature Branch](#deleting-the-feature-branch)
+- [Fetching the code from user's cloud repository](#fetching-the-code-from-user's-cloud-repository)
+- [Commit Message Generation](#commit-message-generation)
+- [Short Hand commands](#short-hand-commands)
+- [Frequently asked questitions (FAQ)](#frequently-asked-questiton-(faq))
 
+---
 
-## **Boosting Git Bash Shell**
+## [**Boost Your Git Bash Shell**](#important-links)
 
-Once you have downloaded the git bash shell if not then please ([click here]()) to know the download procedure.
+Once you have downloaded the git bash shell if not then please ([click here]()) to know the installation procedure.
 
 After successfull install:&nbsp; Steps to be followed:
 - Step 1:&nbsp; Download or clone the Github Repostitory from [here](). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url:&nbsp; www.gitNiteshNandan.com <br>
@@ -92,7 +91,9 @@ After successfull install:&nbsp; Steps to be followed:
 
 - ******************* DONE  **********************
 
-## **First time git setup**
+---
+
+## [**First time git setup**](#important-links)
 
 ### Setting up email & username
 <pre>
@@ -133,8 +134,9 @@ As we know, the code continously swithches between different platforms (linux, w
     git config --global core.autoclrf false
 </pre>
 
+---
 
-## **Setting up workspace** 
+## [**Setting up workspace**](#important-links) 
 
 In CVS we used to checkout the project, in similar way we clone the project in GIT. 
 
@@ -172,7 +174,7 @@ Here ldapId is mandatory argument where branch_name is optional. 99.99% of the t
 
 
 
-#### Adding Cloned Repositories to the eclipse Workspace
+### Adding Cloned Repositories to the eclipse Workspace
 
 - Step 1:&nbsp; Open Your eclipse and create a workspace. <br>
 - Step 2:&nbsp; Go to Window > Show View, and search for Git Repositories and open it. <br>
@@ -192,17 +194,21 @@ Don't change any default setting click on finish button. Repeat the same for eac
 
 You can see the falcondev is checkout as your working branch in project explorer.
 
-## **Setting up the remotes: See the Advantage**
+---
+
+## [**Setting up the remotes: See the Advantage**](#important-links)
 
 You don't have to setup the remotes explictily, it has been taken care of while cloning the project itself. You might confused what are the remotes? 
 
 Remotes are nothing but a reference or url of the repositories. Since Git is distributed system, we can have multiple cloned repository hence a multiple references. Let a example to understand better, A team has 15 developer, since all the developer works on their forked repository and forked repository is nothing but a clone of Official Repository. It mean we have 15 (user's public repository) + 1 (Official Repository), hence 16 different remotes of a repository.
 
-#### Advantage
+### Advantage
 
 Now suppose you want to take some code that is in developing stage from few team members. In case of CVS we have no option other then explictily asking the code and sending throuhg the mail, but in GIT you can fetch the changes with the help of url, even you can compare you code and take only changes that you want, it is nothing but you can collabrate much easily with you team.
 
-## **Creating a feature branch**
+---
+
+## [**Feature Branch Creation**](#important-links)
 
 As per the simplicity you shouldn't on falcondev branch rather you should create a feature branch (user story) and work it. There are several advantage of doing so, I will discuss all these in coming sections. I assume you must be knowing how to create a branch in eclipse. Suppose in eclipse workspace we have 10 branch then to make a featute branch we have to go through each one of the repository, which is not very handy.
 
@@ -224,23 +230,25 @@ create_branch takes two argument first one is a flag and second one is branch_na
  1. &nbsp; csw:&nbsp; It will create a new_branch and checkout the newly created branch.<br>
  2. &nbsp; csw:&nbsp; It will switch to branch existing one. (It will not create a new branch.)
 
- --- image to demomstrate the branch
+ ---image to demomstrate the branch
 
 
-## **Taking Daily Update (Syncing the Repositories) **
+--- 
+
+## [**Taking Daily Update**](#important-links)
 
 In HighRadius Git Workflow we have three repositories: <br>
 1. &nbsp;<strong> Official Repository:</strong> &nbsp; This is the repository from where user forked. All the builds happen here and finally everyone contribute their changes here.<br>
 2. &nbsp; <strong>User's Public Repository:</strong> &nbsp; This is forked repository from where we clone to our local. <br>
 3. &nbsp; <strong>Local Repository:</strong> This repository resides in your local system (eclipse).
 
-#### Convention over configuration
+### Convention over configuration
 
 1. &nbsp; You should never work on falcondev, always create a feature-branch and work. <br>
 2. &nbsp; Before running the script you should't have any untracked or modified file in your workspace (not mandatory but highly recommended). <br>
 3. &nbsp; Commit your changes to your feature branch before running the daily_update script. <br>
 
-#### Why these conventions: Behind the scene
+### Why these conventions: Behind the scene
 
 The above conventions has made to keep our falcondev branch unchanged from your local change, hence the commit history will be remain unchanged and we can take the advantage of fast-forward merge which is conflict free merge.
 
@@ -263,7 +271,9 @@ Daily Update script mainly do three operation for each of the branch:
 
 Here branch-name is optional, if you don't provide the branch-name, after update you working branch will checkout.
 
-## **Checking the update status**
+---
+
+## [**Checking the update status**](#important-links)
 
 The aim of daily_update script is to keep our local and forked repository w sync with the Official Repository. If the last commit id same in all the three repository, then we can say our repository are in sync, or commit in local falcondev should not be behind from the commit of Official Repository.
 
@@ -277,8 +287,9 @@ Here repository-name is optional argument, if you don't give it will show for al
 
 ---image
 
+---
 
-## **Merging the feature Branch**
+## [**Merging the feature Branch**](#important-links)
 
 As we have discussed prviously, we should always work on feature branch, so when we done with our work, we should merge feature branch with the latest code of falcondev and push to our public repository.
 
@@ -324,7 +335,9 @@ These are few reason why I don't like and also suggest not use:<br>
 2. It will destroy the commit id and your feature branch.
 3. It is little complex as compare to previously discussed merge.
 
-## **Tracking the conflict file**
+---
+
+## [**Tracking the conflict file**](#important-links)
 
 While merging the our changes, we often get the conflict, though eclipse will show the red mark after removing the conflict also it generally doesn't change. So, I have written a script to list down all the conflict files from your workspace, so once you do with the resolving with conflicts, you can run the script to cross check.
 
@@ -343,7 +356,9 @@ So, this script doesn't tell exactly whether the file has actual conflict or not
 
 This script comes very handy when multiple file has conflict and you totaly lost the track.
 
-## **Tracking the Modified/Untracked file**
+--- 
+
+## [**Tracking the Modified/Untracked file**](#important-links)
 
 As we work on multiple project and therefore somtimes it is become difficult to track all the changes what we made.
 
@@ -356,8 +371,9 @@ The command goes like: <br>
     $ show_unt
 </pre>
 
+---
 
-## **Deleting the feature Branch**
+## [**Deleting the feature Branch**](#important-links)
 
 As we usually worked on feature_branch, so when you done with the your task you might want to delete the branch. Therefore there is a script called 
 delete_branch which does the same in all the repository of workspace.
@@ -385,8 +401,9 @@ The git command for deleting the branch is: <br>
     $ git branch -D [branch_name]                   // hard delete
 </pre>
 
+---
 
-## **Fetching the code from other user's cloud repository**
+## [**Fetching the code from user's cloud repository**](#important-links)
 
 I personally feel the power of distributed version system like GIT when collabration comes in picture. In CVS, we share our code throgh mail or drive, thanks to distributed system which makes very easy to share your code or even your workspace.
 
@@ -408,7 +425,9 @@ Here remote-name is mandatory parameter which holds the link and references of t
 
 <strong> Note:&nbsp; </strong> This will only download the code from the link it will not merge to your working directory. So to take the change to working directory it has to be merged.
 
-## **Automatically Generating the commit message**
+---
+
+## [**Commit Message Generation**](#important-links)
 
 The good commit message is always encouraged. You might fell writing a commit message is very easy, but believe me writing a good and clean commit message might not be so hard but it is time consuming. The another problem is suppose we write 10 commit message, there might be a high chance that we landup in 10 different format of commit message.
 
@@ -425,7 +444,9 @@ This will open a editor (default editor) like this:
 -- image
 
 
-## **Short Hand commands**
+---
+
+## [**Short Hand commands**](#important-links)
 
 These commands are written with the help of basic commands that exist in UNIX bash shell to save your time.
 
@@ -492,7 +513,9 @@ These short hand commands are called alias.<br>
 
 2. <strong> &nbsp;chrome: &nbsp;</strong> You can see FIT Node3 log using this command. Make sure you have the fit log access.<br>
 
-## **Frequently asked questition (FAQ)**
+---
+
+## [**Frequently asked questitions (FAQ)**](#important-links)
 
 <strong> &nbsp;Q 1: &nbsp;</strong> How many local git repository we can have ? <br>
 <strong> &nbsp;Ans: &nbsp;</strong> You can have as many as repositoy you want, until your's disk is run out of memory.<br> <br>
